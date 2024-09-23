@@ -283,6 +283,7 @@ STYLE SWITCHER FOR DEMO
  * 1. NAVBAR
  */
 .navbar {
+  display: block;
   padding: 0.5rem 1rem;
 }
 
@@ -309,8 +310,19 @@ STYLE SWITCHER FOR DEMO
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
   color: rgba(0, 0, 0, 0.9);
 }
+@media (max-width: 768px) {  
+  .navbar-nav .nav-link {  
+      font-size: 8px; /* 针对小屏幕的字体大小 */  
+  }  
+}  
 
+@media (min-width: 769px) {  
+  .navbar-nav .nav-link {  
+      font-size: 14px; /* 针对大屏幕的字体大小 */  
+  }  
+}  
 .navbar-light .navbar-nav .nav-link {
+  font-size: calc(1rem + 1vw);
   color: rgba(0, 0, 0, 0.5);
 }
 
